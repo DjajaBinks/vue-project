@@ -1,30 +1,44 @@
 <template>
   <div id="app">
-    <Home msg="Welcome to Your Vue.js App"/>
+    <nav class="main-nav">
+      <Burger></Burger>
+      <h1 class="title">Djaja</h1>
+      <Sidebar/>
+    </nav>
+    <Content/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Burger from "./components/Menu/Burger.vue";
+import Sidebar from "./components/Menu/Sidebar.vue";
+import Content from "./components/Content.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "app",
   components: {
-    Home
+    Burger,
+    Sidebar,
+    Content,
+    Footer
   }
-}
+};
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: white;
-  /* margin-top: 60px; */
+html {
+  height: 100%;
+  overflow: hidden;
 }
-body{
-  background: black;
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.main-nav {
+  display: flex;
+  padding: 0.5rem 0.5rem 0;
 }
 </style>
