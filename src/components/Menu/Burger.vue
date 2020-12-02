@@ -42,7 +42,7 @@ button:focus {
   height: 30px;
   width: 32px;
   display: block;
-  z-index: 999;
+  /* z-index: 999; */
   border: 0;
   border-radius: 0;
   /* background-color: green; */
@@ -60,7 +60,6 @@ button:focus {
   left: 6px;
   height: 2px;
   width: auto;
-  /* margin-top: 15px; */
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
     opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
     background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -89,9 +88,10 @@ button:focus {
 }
 
 #burger.active .burger-button {
-  transform: rotate(-180deg);
-  transform: translateX(100%);
-  margin-left: 300px;
+  /* transform: rotate(-180deg);*/
+  z-index: 999;
+  margin-left: 250px;
+  transform: rotate(90deg);
 }
 
 #burger.active .burger-bar {
@@ -99,14 +99,32 @@ button:focus {
 }
 
 #burger.active .burger-bar--1 {
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
+  left:3px;
+  top: 12px;
+  width: 30px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  transform: rotate(90deg);
+  transition-delay: 150ms;
 }
 
 #burger.active .burger-bar--2 {
-  opacity: 0;
+  /* opacity: 0; */
+  left:3px;
+  top: 12px;
+  width: 20px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  transform: rotate(45deg);
+  transition-delay: 50ms;
 }
 
 #burger.active .burger-bar--3 {
+  /* transform: rotate(-45deg); */
+  left:14px;
+  top: 20px;
+  width: 20px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
   transform: rotate(-45deg);
+  transition-delay: 100ms;
 }
 </style>
